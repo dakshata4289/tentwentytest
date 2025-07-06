@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Work_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/layout/Navbar';
 
-// Font setup
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -46,8 +46,8 @@ export default function RootLayout({
           antialiased
         `}
       >
-        <Navbar /> 
-        <main > 
+        <Navbar />
+        <main >
           {children}
         </main>
       </body>

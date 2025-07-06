@@ -60,7 +60,7 @@ export default function FeaturedSection() {
 
   return (
     <section className="relative bg-[#fff8f1] h-auto min-h-[80vh] py-16 overflow-hidden flex flex-col items-center justify-center">
-      {/* Side Cards (Hidden on mobile) */}
+
       <motion.div
         key={activeIndex + '-left'}
         drag="x"
@@ -80,7 +80,7 @@ export default function FeaturedSection() {
         />
       </motion.div>
 
-      {/* Center Card */}
+
       <motion.div
         key={activeIndex + '-center'}
         className="w-64 sm:w-72 md:w-80 z-20 text-center"
@@ -113,7 +113,7 @@ export default function FeaturedSection() {
         </motion.div>
       </motion.div>
 
-      {/* Side Cards (Hidden on mobile) */}
+
       <motion.div
         key={activeIndex + '-right'}
         drag="x"

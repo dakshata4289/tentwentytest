@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function AnimatedHeadline() {
     const words = "Quality Products".split(" ");
     return (
-        <h2 className="text-3xl md:text-5xl font-bold">
+        <h2 className="text-3xl md:text-5xl font-bold text-black">
             {words.map((word, i) => (
                 <motion.span
                     key={i}

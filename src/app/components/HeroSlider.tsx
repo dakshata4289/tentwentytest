@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
-  { id: 1, src: '/hero.webp', title: 'From Our Farms To Your Hands' },
+  { id: 1, src: '/hero.webp', title: 'From Farms To Your Hands' },
   { id: 2, src: '/hero1.webp', title: 'Freshness Guaranteed' },
   { id: 3, src: '/hero2.webp', title: 'Naturally Grown, Carefully Picked' },
 ];
@@ -26,7 +26,7 @@ export default function HeroSlider() {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={slide.id} className="relative w-full h-full overflow-hidden">
-          {/* Animated Background Image with clipPath transition */}
+
           <div className="absolute inset-0 z-0">
             <AnimatePresence mode="wait">
               {activeIndex === index && (
@@ -62,10 +62,10 @@ export default function HeroSlider() {
             </AnimatePresence>
           </div>
 
-          {/* Dark overlay */}
+
           <div className="absolute inset-0 bg-black/50 z-10" />
 
-          {/* Animated Text */}
+
           <AnimatePresence mode="wait">
             {activeIndex === index && (
               <motion.div
@@ -76,7 +76,7 @@ export default function HeroSlider() {
                 transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
                 className="absolute z-20 left-6 sm:left-16 bottom-24 sm:bottom-32 max-w-3xl"
               >
-                <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight drop-shadow-xl">
+                <h1 className="text-white font-semibold text-4xl sm:text-5xl md:text-6xl  mb-10 ml-5 leading-tight tracking-tight drop-shadow-xl">
                   {slide.title}
                 </h1>
               </motion.div>
