@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import type { PanInfo } from 'framer-motion';
 
 const cards = [
   {
@@ -46,13 +47,13 @@ export default function FeaturedSection() {
     return cards[index];
   };
 
-  const handleLeftDrag = (_: any, info: any) => {
+  const handleLeftDrag = (_: unknown, info: PanInfo) => {
     if (info.offset.x > 100) {
       setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length);
     }
   };
 
-  const handleRightDrag = (_: any, info: any) => {
+  const handleRightDrag = (_: unknown, info: PanInfo) => {
     if (info.offset.x < -100) {
       setActiveIndex((prev) => (prev + 1) % cards.length);
     }
@@ -60,6 +61,7 @@ export default function FeaturedSection() {
 
   return (
     <section className="relative bg-[#fff8f1] h-auto min-h-[80vh] py-16 overflow-hidden flex flex-col items-center justify-center">
+
 
       <motion.div
         key={activeIndex + '-left'}
